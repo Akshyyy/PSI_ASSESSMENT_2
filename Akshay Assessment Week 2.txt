@@ -1,0 +1,100 @@
+1)
+object q1{
+	def main(args: Array[String]): Unit={
+		val seq:String="https://www.google.com"
+		val result:String=seq.reverse.toUpperCase()
+		println(result)
+	}
+}
+------------------------------------------------------------------------------------
+2)
+object q2{
+	def main(args:Array[String]):Unit={
+		val donutName = "Vanilla Donut"
+		val quantityPurchased = 10
+		val price = 2.50
+		val donutJson =
+			s"""
+			|{
+			|"donut_name":"$donutName",
+			|"quantity_purchased":"$quantityPurchased",
+			|"price":$price
+			|}
+      """.stripMargin
+	println(donutJson)
+	}
+}
+
+-------------------------------------------------------------------------------------
+3)
+import scala.io.StdIn._
+object q3{
+	def main(args:Array[String]):Unit={
+	val name = readLine("Enter your name: ")
+    println("Enter your age: ")
+    val age = readInt()
+	println(s"Name:" +name)
+	println(s"Age:" +age)
+	}
+}
+
+---------------------------------------------------------------------------------------
+4)
+object q4{
+	def main(args: Array[String]): Unit={
+		val str = "http://www.google.com"
+		val c = str.charAt(8)
+		println(s"The 8th character literal in $str = $c")
+	}
+}
+
+---------------------------------------------------------------------------------------
+5)
+object q5{
+	def main(args: Array[String]): Unit={
+		val glazedDonut = "Glazed Donut"
+		val unitPrice = 2.50
+		val qtyPurchased = 10
+		val totalCost: Double = qtyPurchased * unitPrice
+		println(f"""Total cost of $qtyPurchased $glazedDonut${if (qtyPurchased > 1) "s" else ""} = $$$totalCost%1.2f""")
+	}
+}
+---------------------------------------------------------------------------------------
+6)
+import scala.io.StdIn._
+object q6{
+	def main(args: Array[String]): Unit={
+		val favmovie = readLine("What is your favorite movie of all times?")
+		println(s"$favmovie is totally awesome!")
+	}
+}
+
+-------------------------------------------------------------------------------------
+7)
+object q7{
+  def main(args: Array[String]): Unit = {
+      val list = List("A","BB","CCC","DDDD","EEEEE")
+      var cnt:Int = 0
+      for(i <- list){
+          var a:String = i
+          for( a <- 1 to a.length() ){
+              cnt=cnt+1;
+          }
+          println(i+"-"+cnt)
+          cnt=0;
+      }
+  }
+}
+
+------------------------------------------------------------------------------------------
+8)
+object q8{
+	def main(args:Array[String]):Unit={
+		val l1 = List.range(100, 150, 10)
+		val l2 = l1.mkString(", ")
+		println(s"Elements in the list from 100 to 150, Excluding 150 are  " +l2)
+		println(s"Sum of elements in the list=" +(l1.sum))
+	}
+}
+
+
